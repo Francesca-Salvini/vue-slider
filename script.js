@@ -16,6 +16,9 @@ var app = new Vue(
             ],
         },
         methods: {
+            changePic() {
+                this.nextPic();
+            },
             nextPic() {
                 const nxtImg = this.currentActive + 1;
 
@@ -35,7 +38,14 @@ var app = new Vue(
                 }
             }
         },
-        created() {}
+        created() {
+            
+            setInterval( ( ) =>  {
+                this.changePic();
+            }, 3000);
+                
+            
+        }
     }
 );
 
