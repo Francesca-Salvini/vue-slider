@@ -39,6 +39,12 @@
                 </div>
 
             </div>
+
+            <div class="circles">
+                <span v-for="(image,index) in carouselImages" class="circle" :class="{'active' : index == currentActive}">
+                    <i class="fas fa-circle"></i>
+                </span>
+            </div>
         </section>
     </div>
 
