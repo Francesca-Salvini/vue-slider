@@ -6,7 +6,15 @@
 var app = new Vue(
     {
         el: '#root',
-        data: {},
+        data: {
+            currentActive : 0,
+            carouselImages: [
+               'img/campagna.jpg',
+               'img/cascate.webp',
+               'img/fiori.jpeg',
+               'img/montagne.webp'
+            ],
+        },
         methods: {},
         created() {}
     }

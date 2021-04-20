@@ -16,8 +16,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
-    
 
+    <div id="root">
+        <!--Sezione contenitore-->
+        <section class="slider-container">
+            <!--Sezione che contiene gli elementi dello slider-->
+            <div class="carousel">
+
+                <!--freccia sinistra-->
+                <div class="arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <!--sezione immagini slider-->
+                <div class="images">
+                    <img :src="carouselImages[currentActive]" alt="">
+                </div>
+
+                <!--freccia destra-->
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <!--JAVASCRIPT-->
     <script src="script.js"></script>
