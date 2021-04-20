@@ -15,7 +15,26 @@ var app = new Vue(
                'img/montagne.webp'
             ],
         },
-        methods: {},
+        methods: {
+            nextPic() {
+                const nxtImg = this.currentActive + 1;
+
+                if ( nxtImg > this. carouselImages.length - 1 ) {
+                    this.currentActive = 0;
+                } else {
+                    this.currentActive = nxtImg;
+                }
+            },
+
+            prevPic() {
+                const prevImg = this.currentActive - 1;
+                if( prevImg < 0) {
+                    this.currentActive = this.carouselImages.length - 1;
+                } else {
+                    this.currentActive = prevImg;
+                }
+            }
+        },
         created() {}
     }
 );
