@@ -7,6 +7,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            autoSlideInterval : false,
             currentActive : 0,
             carouselImages: [
                'img/campagna.jpg',
@@ -36,11 +37,15 @@ var app = new Vue(
                 } else {
                     this.currentActive = prevImg;
                 }
+            },
+
+            stopAutoslide() {
+                clearInterval(this.autoSlideInterval);
             }
         },
         created() {
             
-            setInterval( ( ) =>  {
+            this.autoSlideInterval = setInterval( ( ) =>  {
                 this.changePic();
             }, 3000);
                 
